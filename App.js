@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, StatusBar } from 'react-native';
 import Display from './components/Display';
 import Button from './components/Button';
 import Button2 from './components/Button2';
@@ -94,6 +94,7 @@ export default function App() {
   return (
     <>
       <View style={color ? styles.selectTheme : styles.selectThemeLight}>
+        <StatusBar backgroundColor="#000" />
         <TouchableOpacity
           onPress={() => setColor(true)}
         >
