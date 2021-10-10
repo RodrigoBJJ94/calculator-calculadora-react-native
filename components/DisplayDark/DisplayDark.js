@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-export default props => {
+export default function DisplayDark(props) {
     return (
         <View style={styles.display}>
             <Text
@@ -21,16 +21,16 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'flex-end',
-        backgroundColor: 'black',
+        backgroundColor: '#000',
         padding: 20,
         width: '100%',
     },
     textResult: {
         fontSize: 50,
-        color: 'white',
+        color: '#fff',
     },
     textOperation: {
         fontSize: 35,
-        color: 'white',
+        color: '#fff',
     },
 });

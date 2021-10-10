@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import DisplayDark from './components/DisplayDark';
-import DisplayLight from './components/DisplayLight';
-import Themes from './components/Themes';
-import Buttons from './components/Buttons';
+import DisplayDark from './components/DisplayDark/DisplayDark';
+import DisplayLight from './components/DisplayLight/DisplayLight';
+import Themes from './components/Themes/Themes';
+import Buttons from './components/Buttons/Buttons';
 
 let states = {
   vScreen: '',

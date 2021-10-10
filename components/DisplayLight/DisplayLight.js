@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-export default props => {
+export default function DisplayLight(props) {
     return (
         <View style={styles.display}>
             <Text
@@ -21,16 +21,16 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'flex-end',
-        backgroundColor: 'white',
+        backgroundColor: '#fff',
         padding: 20,
         width: '100%',
     },
     textResult: {
         fontSize: 50,
-        color: 'black',
+        color: '#000',
     },
     textOperation: {
         fontSize: 35,
-        color: 'black',
+        color: '#000',
     },
 });
