@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import Styles from './Styles';
+import { View } from 'react-native';
 import DisplayDark from './components/DisplayDark/DisplayDark';
 import DisplayLight from './components/DisplayLight/DisplayLight';
 import Themes from './components/Themes/Themes';
 import Buttons from './components/Buttons/Buttons';
 
-let states = {
-  vScreen: '',
-  vResult: 0,
-  operated: false,
-  point: false,
-};
+let states = { vScreen: '', vResult: 0, operated: false, point: false };
 
 export default function App() {
   const [valueScreen, setValueScreen] = useState(states.vScreen);
@@ -20,7 +16,6 @@ export default function App() {
   const addDigit = (digit) => {
     if (digit === '*' || digit === '/' || digit === '+' || digit === '-') {
       states.point = false;
-      states.more = false;
     };
 
     if (digit === '.' && !states.point) {
@@ -29,7 +24,6 @@ export default function App() {
     } else if (digit === '.' && states.point) {
       return;
     };
-
 
     if ((digit === '*' || digit === '/' || digit === '+' || digit === '-') && states.operated) {
       states.vScreen = states.vResult;
@@ -43,12 +37,7 @@ export default function App() {
   };
 
   const cleanScreen = () => {
-    states = {
-      vScreen: '',
-      vResult: 0,
-      operated: false,
-      point: false,
-    };
+    states = { vScreen: '', vResult: 0, operated: false, point: false };
     setValueScreen(states.vScreen);
     setValueResult(states.vResult);
   };
@@ -94,31 +83,13 @@ export default function App() {
   return (
     <>
       <Themes color={color} setColor={setColor} />
-      <View style={styles.container}>
+      <View style={Styles.container}>
         {color ? <DisplayDark value={valueScreen} result={valueResult} />
           : <DisplayLight value={valueScreen} result={valueResult} />}
-        <View style={color ? styles.touch : styles.touchLight}>
+        <View style={color ? Styles.touch : Styles.touchLight}>
           <Buttons color={color} operate={operate} addDigit={addDigit} />
         </View>
       </View>
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-  },
-  touch: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    backgroundColor: 'rgb(0, 0, 0)',
-  },
-  touchLight: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    backgroundColor: 'white',
-  },
-});
