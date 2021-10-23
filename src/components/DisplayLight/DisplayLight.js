@@ -5,14 +5,8 @@ import { View, Text } from 'react-native';
 export default function DisplayLight(props) {
     return (
         <View style={Styles.display}>
-            <Text
-                style={Styles.textOperation}
-                numberOfLines={1}
-            >{props.value}</Text>
-            <Text
-                style={Styles.textResult}
-                numberOfLines={1}
-            >{props.result}</Text>
+            <Text style={Styles.textOperation} numberOfLines={1}>{props.value}</Text>
+            <Text style={Styles.textResult} numberOfLines={1}>{props.result}</Text>
         </View>
     );
 };

@@ -4,18 +4,23 @@ import { Text, TouchableOpacity } from 'react-native';
 
 export default function setLight(props) {
     const stylesButtons = [Styles.button];
+
     if (props.operation) {
         stylesButtons.push(Styles.buttonSpecials)
     };
+
     if (props.cleaner) {
         stylesButtons.push(Styles.buttonSpecials)
     };
+
     if (props.backspace) {
         stylesButtons.push(Styles.buttonSpecials)
     }
+
     if (props.equal) {
         stylesButtons.push(Styles.buttonEqual)
     };
+    
     if (props.double) {
         stylesButtons.push(Styles.buttonDouble)
     };

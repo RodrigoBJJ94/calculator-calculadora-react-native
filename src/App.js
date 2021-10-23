@@ -47,11 +47,13 @@ export default function App() {
       cleanScreen();
       return;
     }
+
     if (opDigit === 'backspace') {
       states.vScreen = valueScreen.substring(0, (valueScreen.length - 1));
       setValueScreen(states.vScreen);
       return;
     }
+    
     try {
       if ((states.vScreen.match('[%]')) && (states.vScreen.match('[-]'))) {
         let percent = states.vScreen.split('-');
