@@ -9,11 +9,11 @@ export default StyleSheet.create({
     touch: {
         flexDirection: 'row',
         flexWrap: 'wrap',
-        backgroundColor: 'rgb(0, 0, 0)',
+        backgroundColor: '#000',
     },
     touchLight: {
         flexDirection: 'row',
         flexWrap: 'wrap',
-        backgroundColor: 'white',
+        backgroundColor: '#fff',
     },
 });
