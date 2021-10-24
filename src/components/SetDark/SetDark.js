@@ -2,32 +2,24 @@ import React from 'react';
 import Styles from './Styles';
 import { Text, TouchableOpacity } from 'react-native';
 
-export default function setDark(props) {
+export default function setDark({ operation, cleaner, backspace, equal, double, click, label }) {
     const stylesButtons = [Styles.button];
 
-    if (props.operation) {
+    if (operation || cleaner || backspace) {
         stylesButtons.push(Styles.buttonSpecials)
     };
 
-    if (props.cleaner) {
-        stylesButtons.push(Styles.buttonSpecials)
-    };
-
-    if (props.backspace) {
-        stylesButtons.push(Styles.buttonSpecials)
-    };
-
-    if (props.equal) {
+    if (equal) {
         stylesButtons.push(Styles.buttonEqual)
     };
-    
-    if (props.double) {
+
+    if (double) {
         stylesButtons.push(Styles.buttonDouble)
     };
 
     return (
-        <TouchableOpacity onPress={props.click}>
-            <Text style={stylesButtons}>{props.label}</Text>
+        <TouchableOpacity onPress={click}>
+            <Text style={stylesButtons}>{label}</Text>
         </TouchableOpacity>
     );
 };

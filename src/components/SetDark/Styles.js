@@ -5,7 +5,7 @@ export default StyleSheet.create({
         fontSize: 35,
         height: Dimensions.get('window').width / 5,
         width: Dimensions.get('window').width / 4,
-        padding: 12,
+        padding: 15,
         backgroundColor: '#000',
         color: '#fff',
         borderWidth: 0.5,
